@@ -13,6 +13,8 @@
               <strong>Cocktail:</strong>
               <%= c.name %>
               <br>
+              <%= cl_image_tag(c.photo, height: 300, width: 400, crop: :fill) %>
+              <br>
               <strong>Ingredients:</strong>
               <% c.doses.each do |d| %>
                 <%= d.ingredient.name.strip %>

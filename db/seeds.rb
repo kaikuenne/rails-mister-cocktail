@@ -7,7 +7,7 @@ drinks.each do |ingredient|
 
   ingredient.each do |k, v|
     ingredient = Ingredient.create(name: v)
-    Cocktail.create(name: Faker::RuPaul.queen)
+    Cocktail.create(name: Faker::RuPaul.queen, remote_photo_url: 'https://ssli.ebayimg.com/images/g/hM0AAOSwX61ZAyYh/s-l640.jpg')
   end
 end
 

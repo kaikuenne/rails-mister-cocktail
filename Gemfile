@@ -9,6 +9,13 @@ gem 'rails', '~> 5.2.0'
 #faker
 gem 'faker'
 
+#security
+gem 'figaro'
+
+#image upload
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 #frontend stuff
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'
