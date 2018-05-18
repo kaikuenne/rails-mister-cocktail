@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <br>
+    <%= link_to "Create new Cocktail", new_cocktail_path, class: "btn btn-warning" %>
+    <br>
+    <br>
+  </div>
+  <div class="row">
+    <% @cocktails.each do |c| %>
+      <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Cocktail:</strong>
+              <%= c.name %>
+              <br>
+              <strong>Ingredients:</strong>
+              <% c.doses.each do |d| %>
+                <%= d.ingredient.name.strip %>
+                <%= d.description %> |
+              <% end %>
+            </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <%= link_to "Show", cocktail_path(c), class: "btn btn-primary"%>
+      </div>
+    <% end %>
+  </div>
+</div>

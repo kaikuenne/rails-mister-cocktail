@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+
+    <strong>Name: </strong><%= @cocktail.name %>
+    <br>
+    <strong>Ingredients:</strong>
+    <% @cocktail.doses.each do |d| %>
+      <br>
+      <%= d.ingredient.name %>, amount: <%= d.description %>
+    <% end %>
+
+
+  </div>
+</div>
